@@ -2,7 +2,7 @@
 Zdo extends Pdo (inspired by Zend_Db)
 
 Example:
-=======
+--------
 
   <?php
   require 'Zdo.php';
