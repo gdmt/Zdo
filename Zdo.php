@@ -18,7 +18,7 @@ class Zdo extends PDO
 	}
 	
 	public function query($sql,$bind=array())
-    {
+	{
 		return $this->prepare($sql)->execute($bind);
 	}
 	
@@ -52,12 +52,12 @@ class Zdo_Statement
 	}
 	
 	public function fetchNum($cursorOrientation=PDO::FETCH_ORI_NEXT, $cursorOffset=0)
-    {
+	{
 		return $this->pdoStatement->fetch(PDO::FETCH_NUM, $cursorOrientation, $cursorOffset);
 	}
 	
 	public function fetchAssoc($cursorOrientation=PDO::FETCH_ORI_NEXT, $cursorOffset=0)
-    {
+	{
 		return $this->pdoStatement->fetch(PDO::FETCH_ASSOC, $cursorOrientation, $cursorOffset);
 	}	
 	
@@ -67,7 +67,7 @@ class Zdo_Statement
 	}
 	
 	public function fetchAllNum()
-    {
+	{
 		return $this->pdoStatement->fetchAll(PDO::FETCH_NUM);
 	}
 	
