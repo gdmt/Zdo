@@ -4,7 +4,6 @@ Zdo extends Pdo (inspired by Zend_Db)
 Example:
 --------
 
-  <?php
   require 'Zdo.php';
   
   $db=new Zdo(array(
@@ -19,4 +18,3 @@ Example:
   while($r=$q->fetchAssoc()){
     echo $r['name'].' '.$r['colour'].' '.$r['calories']."\n";
   }
-  ?>
