@@ -8,6 +8,8 @@ class Zdo extends PDO
 			parent::__construct('sqlite:'.$config['dbname']);
 		}elseif($config['adapter']=='pgsql'){
 			parent::__construct('pgsql:dbname='.$config['dbname'].';host='.$config['host'].';user='.$config['username'].';password='.$config['password']);
+		}elseif($config['adapter']=='mysql'){
+			parent::__construct('mysql:dbname='.$config['dbname'].';host='.$config['host'], $config['username'], $config['password']);
 		}
 		
 		$this->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
